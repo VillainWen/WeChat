@@ -1,0 +1,32 @@
+<?php declare(strict_types=1);
+/*------------------------------------------------------------------------
+ * File.php
+ * 	
+ * Description
+ *
+ * Created on alt+t
+ *
+ * Author: 蚊子 <1423782121@qq.com>
+ * 
+ * Copyright (c) 2021 All rights reserved.
+ * ------------------------------------------------------------------------
+ */
+
+
+namespace Villain\WeChat\OfficialAccount\Customer;
+
+
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
+
+class CustomerProviders implements ServiceProviderInterface {
+
+    /**
+     * @param Container $pimple
+     */
+    public function register(Container $pimple) {
+        !isset($pimple['customer']) && $pimple['customer'] = function ($app) {
+            return new Customer($app);
+        };
+    }
+}

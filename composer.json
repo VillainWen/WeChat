@@ -1,0 +1,33 @@
+{
+    "name": "villain/wechat",
+    "description": "a wechat tool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "villain",
+            "email": "1423782121@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-fileinfo": "*",
+        "ext-openssl": "*",
+        "ext-simplexml": "*",
+        "guzzlehttp/guzzle": "^6.2 || ^7.0",
+        "monolog/monolog": "^1.22 || ^2.0",
+        "villain/cache": "^1.0",
+        "pimple/pimple": "^3.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+      "ext-libxml": "*",
+        "symfony/http-foundation": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Villain\\WeChat\\": "src/"
+        },
+        "files": [
+            "src/Helpers/Helpers.php"
+        ]
+    }
+}
